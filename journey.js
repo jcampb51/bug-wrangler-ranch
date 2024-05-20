@@ -38,7 +38,7 @@ const journeyMaker = () => {
         journey.push("forest")
     }
 
-    for (let mountainNumber = 0; mountainNumber < areas.mountain; mountainNumber++) {
+    for (let mountainNumber = 0; mountainNumber < areas.mountains; mountainNumber++) {
         journey.push("mountain")
     }
 
