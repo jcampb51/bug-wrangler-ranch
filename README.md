@@ -105,9 +105,9 @@ Your journey will take you through the wildness of the American Midwest and acro
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > The "drovers" variable is being set in the 'hireDrovers' function found in the drovers.js module. This function take the input from the 'cattleToDrive' variable on line 5 of main.js. It then takes this value to generate an array of random drovers supplied from the database module's 'drovers' array. This new randomized drover array becomes the value of 'drovers' and will be log later in the program to generate the list of drovers similar to what is seen in the example output.
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > The line of code in question is part of a 'forof' loop. 'drover' in this instance is the iterator and 'drovers' are the objects being iterated. 'drovers', as explained in question 1, are objects of the 'drovers', or in other words the random assortment of drovers from the database module. JS has a helpful way of reminding you what each variable of the 'for of' loop is by automatically giving you the skeleton of the function.
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
    > Your public Loom URL here
 4. Also in the **journey** module, there is the following code:
@@ -117,11 +117,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This line of code is a "for...of" loop. 'forestNumber' is an iterator for the 'areas.forests' object. In a previous section of the module it has created a random value for each section of journey. Assuming this function returns a value for 'createForest' the 'forestNumber' variable will checked against the 'areas.forests' variable. If the equation in the middle section of the loop is true it goes to the third section and increments the value of the 'forestNumber' variable by, in this case, 1 as denoted by the '++', and then reruns the loop again until the equation in the middle of the section is no longer true. For each instance of the equation being true it will push the string "forest" to the 'journeyMaker' function to be potentially logged out when the program is run. By way of example, if 'forestNumber = 2' the loop would run twice and would eventually log 'forest' twice when the program runs.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The 'database' variable houses the 'cattleTypes' array and the 'drovers' array. This database module will then be imported by the drovers and cattle modules to generate the necessary arrays for the rest of the programs. In the drover.js example, since the database variable holds two arrays you can access either with the '.drovers' or '.cattleTypes' notation.
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > In this function '(herdSize)' is a parameter of the function 'hireDrovers'. Parameters are given a different value; be it another object, variable, or in this case, an integer. In this example '(herdSize)' gets its value from 'main.js' with the value of the variable assigned to the variable 'cattleToDrive'. The parameter/value is also shared in the 'roundup' function as well, and this allows both functions to use the same input without having to repeat 'cattleToDrive' over multiple modules, in essence, making the code more elegant and less cluttered.
 
 
 ## Final Step
